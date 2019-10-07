@@ -1,11 +1,36 @@
 window.onload = function() {
-
     // --------------------- STEP 1 ---------------------
         // Par defaut le formulaire de connection est afficher, le formulaire d'inscription quand a lui est en 'display: none';
         // FAITE EN SORTE QUE AU CLICK SUR LES BUTTONS POSSEDANT LA CLASS 'square-button-empty'
             // DE MASQUER LE LOGIN FORM POUR AFFICHER LE REGISTER FORM, ET INVERSEMENT <->
 
 
+
+var signup = document.querySelectorAll(".square-button-empty");
+
+for (var i= 0; i<signup.length; i++){
+
+signup[i].onclick = function(e){
+    var regist = document.querySelector("#register-form");
+    var con = document.querySelector("#connexion-form");
+
+
+    // con.style.display = "none";
+    // regist.style.display ="flex";
+
+
+
+if(e.target.getAttribute("data-form") == 0){
+    con.style.display = "none";
+    regist.style.display ="flex";
+}
+
+else{con.style.display = "flex"
+    regist.style.display ="none"
+
+}
+}
+}
 
 
 
