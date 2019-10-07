@@ -1,0 +1,132 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: fantasy Times;
+}
+
+main {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    background: #9C517E;
+}
+
+main > header {
+    display: flex;
+    width: 100%;
+}
+
+main > header > h1 {
+    color: #EDA1A5;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    width: 100%;
+}
+
+main > section {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form {
+  margin-top: 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.contact-form .form-block {
+    padding: 15px;
+}
+.contact-form .input-block {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 80%;
+  height: 60px;
+  padding: 25px;
+  position: relative;
+  margin-bottom: 20px;
+  color: grey;
+}
+.contact-form .input-block input {
+  text-align: center;
+}
+.contact-form .input-block input:focus {
+  background-color: #fff;
+  outline: 0;
+  text-align: center;
+}
+
+.contact-form input:focus < .input-block {
+  box-shadow: 2px 2px 5px black;
+  outline: 0;
+}
+
+.contact-form .input-block .form-control {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
+  color: #333;
+}
+
+.contact-form .square-button {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #C26569;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  padding: 0 40px;
+  height: 60px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+.contact-form .square-button:hover, .contact-form .square-button:focus {
+  background-color: #9C517E;
+  color: white;
+}
+
+.form-block-switch {
+    color: white;
+}
+
+.contact-form .square-button-empty {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  padding: 0 20px;
+  height: 40px;
+  width: 100%;
+  cursor: pointer;
+  background: transparent;
+}
+
+.contact-form .square-button-empty:hover, .contact-form .square-button-empty:focus {
+  background-color: #9C517E;
+  color: white;
+}
+
+#register-form {
+    display: none;
+}
