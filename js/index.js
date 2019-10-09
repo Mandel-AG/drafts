@@ -25,10 +25,9 @@ if(e.target.getAttribute("data-form") == 0){
     regist.style.display ="flex";
 }
 
-else{con.style.display = "flex"
-    regist.style.display ="none"
-
-}
+else if (e.target.getAttribute("data-form") != 1) {
+    con.style.display = "flex";
+    regist.style.display ="none";
 }
 }
 
@@ -47,6 +46,91 @@ else{con.style.display = "flex"
 
 
 
+var prem = document.querySelector("#premier");
+var deux = document.querySelector("#deuxieme");
+var square = document.querySelectorAll(".square-button");
+
+
+
+var info = document.querySelectorAll(".form-control");
+
+function recup(info){
+
+
+for(v=0; v<info.length; v++){
+ var valeur = info[v].value;
+
+
+console.log(valeur);
+}
+}
+
+prem.onclick = recup(info);
+
+}
+
+
+
+
+
+// var pass = document.getElementsByTagName("password");
+
+// for (c = 0; c<pass.length; c++){
+//     var valpass = pass[c].value;
+//     var code = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+
+//     if(valpass.match(code)){
+//         return true;
+//     }
+//     else{
+//         return false;
+//     }
+// }
+
+
+
+
+
+// premier.onclick = function(event){
+
+// var square = document.querySelectorAll(".square-button")
+// var info = document.querySelectorAll(".form-control");
+
+// var prem = document.querySelector("#premier");
+// var deux = document.querySelector("#deuxieme");
+
+
+// for(v=0; v<info.length; v++){
+
+// var valeur = info[v].value;
+
+
+// console.log(valeur);
+// }
+
+
+// }
+
+
+// deuxieme.onclick = function(event){
+
+// var square = document.querySelectorAll(".square-button")
+// var info = document.querySelectorAll(".form-control");
+
+// var prem = document.querySelector("#premier");
+// var deux = document.querySelector("#deuxieme");
+
+
+// for(v=0; v<info.length; v++){
+
+// var valeur = info[v].value;
+
+
+// console.log(valeur);
+// }
+
+// console.log(valeur);
+// }
 
 
     // --------------------- STEP 3 -------------------------
@@ -65,7 +149,7 @@ else{con.style.display = "flex"
             // --> on utilise les données saisie du formulaire d'inscription pour setup les propriétés notre nouvelle 'User'
             // puis on stocke ce nouvelle objet utilisateurs dans le 'localStorage' sous la clé 'user'
 
-
+// creer un autre fichier JS , et linker dnas le HTML avant l'autre link
 
 
 
@@ -79,6 +163,5 @@ else{con.style.display = "flex"
                     // 1.2.1 si l'email ou le mot de passe ne correspondent pas, retourner un message d'erreur (les alert() sont proscrit)
 
             // 2. Si les données saisies correspondent a celles présentes dans le 'localStorage', rediriger l'utilisateur sur la page 'home.html'
-
 
 }
