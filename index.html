@@ -20,12 +20,12 @@
                         </div>
 
                         <div class="input-block">
-                          <input type="password" placeholder="Enter your password" class="form-control">
+                          <input type="password"  pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z]).{8,}"  placeholder="Enter your password" class="form-control">
                         </div>
                     </div>
 
                     <div class="form-block">
-                          <button type="button" class="square-button">Log in</button>
+                          <button type="button" id="premier" class="square-button">Log in</button>
                     </div>
 
                     <div class="form-block-switch">
@@ -38,8 +38,9 @@
 
                       <div class="form-block">
 
+
                           <div class="input-block">
-                              <input type="text" placeholder="Define your username" class="form-control">
+                              <input type="text" minlength="5" placeholder="Define your username" class="form-control">
                           </div>
 
                           <div class="input-block">
@@ -47,16 +48,16 @@
                           </div>
 
                           <div class="input-block">
-                            <input type="password" placeholder="Enter your password" class="form-control">
+                            <input type="password"   pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter your password" minlength="8" class="form-control">
                           </div>
 
                           <div class="input-block">
-                            <input type="password" placeholder="Confirm your password" class="form-control">
+                            <input type="password"  pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}"   placeholder="Confirm your password" class="form-control">
                           </div>
                       </div>
 
                       <div class="form-block">
-                            <button type="button" class="square-button">Sign up</button>
+                            <button type="button" id="deuxieme" class="square-button">Sign up</button>
                       </div>
 
                       <div class="form-block-switch">
