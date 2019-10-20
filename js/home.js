@@ -9,6 +9,46 @@ window.onload = function() {
             // le deuxieme, est une fonction 'callback' qui nous permet d'avoir accès au données sous la forme d'une variables
             // cette variable est un 'array' contenant une plusieurs objet correspondant chacun a un article
 
+class Article {
+
+    constuctor (id, title, content, resumes, author, publishedDate, img, tags){
+
+        this.id = id
+        this.title = title;
+        this.content = content;
+        this.resumes = resumes;
+        this.author = author;
+        this.publishedDate = publishedDate;
+        this.img = img;
+        this.tags = tags;
+    }
+
+        getId(){return this.id}
+        getTitle(){return this.title}
+        getContent(){return this.content}
+        getResumes(){return this.resumes}
+        getAuthor(){return this.author}
+        getPublishedDate(){return this.publishedDate}
+        getImg(){return this.img}
+        getTags(){return this.tags}
+
+
+
+        SetId = function(newId){this.id = newId}
+        SetTitle = function(newTitle){this.title = newTitle;}
+        SetContent = function(newContent){this.content = newContent;}
+        SetResumes = function(newResumes){this.resumes = newResumes;}
+        SetAuthor = function(newAuthor){this.author = newAuthor;}
+        SetPublishedDate = function(newPublishedDate){this.publishedDate = newPublishedDate;}
+        SetImg = function(newImg){this.img = newImg;}
+        SetTags= function(newTags){this.tags = newTags;}
+}
+
+
+
+
+
+
 
 
 
@@ -24,6 +64,19 @@ window.onload = function() {
                 // exemple : this.SetTitle = function(newTitle) { this.title = newTitle; } <----- ceci est un SETTER
 
 
+
+                for(i=1,=; i< article.length< i++){
+
+                var article = new Article (article.id, article.title, article.content, article.resumes, article.author, article.publishedDate, article.img, article.tags)
+            
+
+
+               var main = document.querySelector("main");
+                var article = document.main.createElement("article");
+                
+                article.innerHTML = getTitle()
+                main.setAttribute('data-id')
+}
 
 
 

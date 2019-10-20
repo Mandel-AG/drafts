@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>JavaScriptMe</title>
         <link rel="stylesheet" href="css/main.css">
+        <script type="text/javascript" src="js/index2.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </head>
     <body>
@@ -20,17 +21,17 @@
                         </div>
 
                         <div class="input-block">
-                          <input type="password" placeholder="Enter your password" class="form-control">
+                          <input type="password"  pattern="(?=.*[a-z])(?=.*[0-9])(?=.*[A-Z]).{8,}"  placeholder="Enter your password" class="form-control">
                         </div>
                     </div>
 
                     <div class="form-block">
-                          <button class="square-button">Log in</button>
+                          <button type="button" id="premier" class="square-button">Log in</button>
                     </div>
 
                     <div class="form-block-switch">
                         <h3>Don't have an account ?</h3>
-                        <button class="square-button-empty">Sign up</button>
+                        <button type="button" data-form="0" class="square-button-empty">Sign up</button>
                     </div>
 
                   </form>
@@ -38,30 +39,31 @@
 
                       <div class="form-block">
 
+
                           <div class="input-block">
-                              <input type="text" placeholder="Define your username" class="form-control">
+                              <input type="text" minlength="5" placeholder="Define your username" class="form-control">
                           </div>
 
                           <div class="input-block">
                               <input type="email" placeholder="Enter your email" class="form-control">
                           </div>
 
-                          <div class="input-block">
-                            <input type="password" placeholder="Enter your password" class="form-control">
+                          <div class="input-block mdp">
+                            <input type="password"   pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter your password" minlength="8" class="form-control">
                           </div>
 
                           <div class="input-block">
-                            <input type="password" placeholder="Confirm your password" class="form-control">
+                            <input type="password"  pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}"   placeholder="Confirm your password" class="form-control">
                           </div>
                       </div>
 
                       <div class="form-block">
-                            <button class="square-button">Sign up</button>
+                            <button type="button" id="deuxieme" class="square-button">Sign up</button>
                       </div>
 
                       <div class="form-block-switch">
                           <h3>Have an account ?</h3>
-                          <button class="square-button-empty">Log in</button>
+                          <button type="button" data-form="1" class="square-button-empty">Log in</button>
                       </div>
                     </form>
             </section>
