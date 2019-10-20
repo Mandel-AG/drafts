@@ -1,21 +1,5 @@
-window.onload = function() {
+window.onload = function (){
 
-
-    class User {
-
-
-    constructor(username, email, password){
-        this.username = username;
-        this.email = email;
-        this.password = password;
-    }
-
-    getUsername(){return this.username}
-    getEmail(){return this.email}
-    getPassword(){return this.password}
-   
-
-}
     // --------------------- STEP 1 ---------------------
         // Par defaut le formulaire de connection est afficher, le formulaire d'inscription quand a lui est en 'display: none';
         // FAITE EN SORTE QUE AU CLICK SUR LES BUTTONS POSSEDANT LA CLASS 'square-button-empty'
@@ -23,31 +7,35 @@ window.onload = function() {
 
 
 
+
 var signup = document.querySelectorAll(".square-button-empty");
-
-for (var i= 0; i<signup.length; i++){
-
+var connexion = document.querySelector("#connexion-form")
+var register = document.querySelector("#register-form")
+for(var i = 0; i<signup.length; i++){
 signup[i].onclick = function(e){
-    var regist = document.querySelector("#register-form");
-    var con = document.querySelector("#connexion-form");
+
+    
+
+        if(e.target.getAttribute("data-form") == 0){
+            connexion.style.display = "none";
+            register.style.display = "flex";
+
+        }
+
+        else {
+            connexion.style.display = "flex";
+            register.style.display = "none";
+        }
 
 
-    // con.style.display = "none";
-    // regist.style.display ="flex";
 
 
 
-if(e.target.getAttribute("data-form") == 0){
-    con.style.display = "none";
-    regist.style.display ="flex";
-}
+    }}
 
-else if (e.target.getAttribute("data-form") != 0) {
-    con.style.display = "flex";
-    regist.style.display ="none";
-}
-}
-}
+
+
+
 
 
 
@@ -60,105 +48,93 @@ else if (e.target.getAttribute("data-form") != 0) {
             //  3. vérifier que le password fait au moins 8 caracteres et contient a minima une majuscule/minuscule ainsi qu'un entier (integer)
 
 
+            var login = document.querySelector("#premier")
+            var signup2 = document.querySelector("#deuxieme")
+            var logsign = document.querySelectorAll(".square-button")
+            var get = localStorage.getItem("user");
+            var parseget = JSON.parse(get);
+            
 
 
-// var prem = document.querySelector("#premier");
-// var deux = document.querySelector("#deuxieme");
-// var square = document.querySelectorAll(".square-button");
+    login.onclick = function(event){
+        let passwordlog = connexion[1].value;
+        let emaillog = connexion[0].value;
+        var passlog = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/;
+
+        
+
+
+        if (passlog.test(passwordlog)==false){
+        alert("Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule et un nombre entier")
+}
+
+        if(get == null){
+            alert("account do not exist, please register")
+        }
+
+        if(parseget.email == emaillog && parseget.password == passwordlog){
+            document.location.href="C:/wamp64/www/JavascriptMe/home.html";
+        }
+            else{
+                alert("account do not exist, please register")
+
+            
+        }
+        
+            
+
+            
 
 
 
-// var info = document.querySelectorAll(".form-control");
-
-// function recup(info){
-
-
-// for(v=0; v<info.length; v++){
-//  var valeur = info[v].value;
-
-
-// console.log(valeur);
-// }
-// }
-
-// prem.onclick = recup(info);
-
-// }
+           
+        console.log(emaillog, passwordlog)
+}
 
 
 
 
+    signup2.onclick = function(event){
+        let username = register[0].value;
+        let emailreg = register[1].value
+        let passwordreg = register[2].value;
+        let passconf = register[3].value;
+        let passreg = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/;
+        const utilisateur = new User(register[0].value,register[1].value,register[2].value)
+        var set = localStorage.setItem("user", JSON.stringify(utilisateur));
 
-var pass = document.getElementsByTagName("password");
+    
+        var erreur = document.querySelector(".mdp")
+        var div = document.createElement("div")
+        var text = document.createTextNode("Les mots de passe ne sont pas identiques!")
+        div.appendChild(text); 
 
-for (c = 0; c<pass.length; c++){
-    var valpass = pass[c].value;
-    var code = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
 
-    if(valpass.match(code)){
-        return true;
+        div.style.display = "inline-block";
+
+
+        if(passreg.test(passwordreg)==false){
+            alert("Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule et un nombre entier")
+        }
+
+
+        if(passwordreg !== passconf){
+            erreur.appendChild(div)
+        }
+
+        console.log("bonjour " + utilisateur.getUsername() + " " + utilisateur.getEmail() + " " + utilisateur.getPassword())
+        
+        
+
+
+
+    
     }
-    else{
-        return false;
-    }
-}
-
-
-var prem = document.querySelector("#premier");
-var deux = document.querySelector("#deuxieme");
-var square = document.querySelectorAll(".square-button");
-var info = document.querySelectorAll(".form-control");
-var input = document.getElementsByTagName("input");
-var square = document.querySelectorAll(".square-button")
-var info = document.querySelectorAll(".form-control");
-
-
-
-prem.onclick = function(event){
-
-var square = document.querySelectorAll(".square-button")
-var info = document.querySelectorAll(".form-control");
-
-
-for(v=0; v<info.length; v++){
-
-var valeur = info[v].value;
-
-var form = document.getElementById("register-form")
-
-
-console.log(valeur);
-
-}
-
-}
 
 
 
 
 
-
-
-
-
-deux.onclick = function(event){
-
-
-var form = document.getElementById("register-form")
-var username1 = form[0].value;
-const utilisateur = new User(username1, email1, password1);
-
-var email1 = form[1].value;
-var password1 = form[2].value;
-
-
- 
-console.log('Bonjour ' + utilisateur.getUsername() + utilisateur.getEmail() + utilisateur.getPassword() + ' !');
-}
-
-
-localStorage.setItem("user",
-    JSON.stringify(user))
 
 
     // --------------------- STEP 3 -------------------------
@@ -183,9 +159,6 @@ localStorage.setItem("user",
 
 
 
-// const utilisateur = new User(input.username);
-
-// console.log(utilisateur.getUsername());
 
 
     // --------------------- STEP 4 -------------------------
