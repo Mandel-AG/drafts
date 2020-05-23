@@ -1,0 +1,327 @@
+body{
+    width : auto; 
+    height: auto; 
+    margin : 0; 
+    padding: 0; 
+    background-color: #0A0618;
+    color : whitesmoke; 
+    font-family: 'Maven Pro', sans-serif;
+    text-decoration: none;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Header */
+
+#HeaderContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 10vh;
+}
+
+#Entête{
+    display: flex; 
+    flex-direction: column;
+    height: 30vh; 
+}
+
+#HeaderContainer img{
+    width: 4%;
+    margin: 1vw 0 0 3vw;
+}
+
+h1{
+    font-family: 'Long Cang', cursive;
+    font-size: 6vw;
+}
+
+#line {
+    width: 200%;
+    height: 30vh;
+    border-top: whitesmoke 1px solid; 
+    margin-left: 6.94vw;
+}
+
+/* Bouton Log In dans Header */
+
+#LogIn{
+    position: relative;
+    background: #19193D;
+    border: none; 
+    font-size: 1.6vw;
+    list-style: none;
+    margin: 1vw 3vw 0 0;
+    padding: 0.8vw;
+    cursor: pointer;
+}
+
+#LogIn a {
+    text-decoration: none;
+    color: whitesmoke;
+    text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.8);
+}
+
+/* Border X get width  */
+.borderXwidth a:before, .borderXwidth a:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+.borderXwidth a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+.borderXwidth a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+.borderXwidth a:hover:before, .borderXwidth a:hover:after
+{
+    opacity: 1;
+    width: 100%;
+}
+
+/* #LogIn:hover {
+    background: #655B6C;
+    transition: 1s ease;
+} */
+
+/* Formulaires */
+
+#AbonnementsContainer {
+    height: 80vh;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+/* Abonnement Basic */
+
+#Basic {
+    display: flex;
+    flex-direction: column;
+}
+
+#CheckIdentity{
+    display: flex; 
+    justify-content: space-around;
+    font-size: 1vw;
+    padding-bottom:1vw;
+}
+
+#Basic h3 {
+    border: 2px solid whitesmoke;
+    margin: 3vw 0 1vw 30vw;
+    padding: 2vw 2.5vw 2vw 2.5vw;
+    font-size: 1.4vw;
+    text-align: center;
+}
+
+#Basic form{
+    box-shadow:0 2px 5px 2px #655B6C;
+    margin-left: 30vw; 
+    padding: 20px;
+}
+
+.required{
+    font-size: 1vw; 
+    color:#655B6C;
+}
+
+input{
+    background-color: #0A0618;
+    color: whitesmoke;
+}
+
+::placeholder{
+    font-size: 0.9vw;
+}
+
+#Terms label a{
+    font-size: 0.8vw;
+}
+
+#Terms2 label{
+    font-size: 0.8vw;
+}
+
+#LastSection{
+    margin-top: 0.8vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#LastSection button{
+    color: whitesmoke;
+    background: #19193D;
+    border: white 0.2px solid;
+    font-size: 1.33vw;
+    padding: 0.7vw; 
+}
+
+#LastSection button:hover {
+    background: #655B6C;
+    transition: 1s ease;
+}
+
+small{
+    font-size: 0.8vw;
+}
+
+
+/* Abonnement Premium */
+
+#Premium{
+    display: none;
+    flex-direction: column;
+}
+
+#CheckIdentity2{
+    display: flex; 
+    justify-content: space-around;
+    font-size: 1vw;
+    padding-bottom:1vw;
+}
+
+#Premium h3 {
+    border: 2px solid whitesmoke;
+    margin: 3vw 0 1vw 30vw;
+    padding: 2vw 2.5vw 2vw 2.5vw;
+    font-size: 1.4vw;
+    text-align: center;
+}
+
+#Premium form{
+    box-shadow:0 2px 5px 2px #655B6C;
+    margin-left: 30vw; 
+    padding: 20px;
+}
+
+#TermsTwo label a{
+    font-size: 0.8vw;
+}
+
+#TermsTwo2 label {
+    font-size: 0.8vw;
+}
+
+#LastSection2{
+    margin-top: 0.8vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#LastSection2 button{
+    color: whitesmoke;
+    background: #19193D;
+    border: white 0.2px solid;
+    font-size: 1.33vw;
+    padding: 0.7vw; 
+}
+
+#LastSection2 button:hover {
+    background: #655B6C;
+    transition: 1s ease;
+}
+
+#LastSection2 a{
+    margin-bottom: 1vw;
+}
+
+/* Bouton Switch Abonnement */
+
+#Switch h3{
+    position: relative;
+    border: 2px solid whitesmoke;
+    margin: 7vw 0 0 2vw;
+    padding: 2vw;
+    font-size: 1.2vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Pull right and left  */
+.pullRightLeft h3:before, .pullRightLeft h3:after
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.2;
+    transition: all 0.3s;
+}
+
+.pullRightLeft h3:before
+{
+    left: 0px;
+} 
+
+.pullRightLeft h3:after
+{
+    right: 0px;
+}
+
+.pullRightLeft h3:hover:before, .pullRightLeft h3:hover:after
+{
+    width: 100%;
+}
+
+/* Footer */
+
+footer{
+    display: flex; 
+    flex-direction: column ;
+    width: 100%;
+}
+
+.LiensUtiles{
+    display: flex;
+    justify-content: space-around;
+}
+
+footer #Réseaux {
+    display: flex; 
+    justify-content: space-around;
+}
+
+footer #Réseaux img{
+    width: 3vw;
+}
+
+footer a {
+    color: whitesmoke;
+    font-size: 1.2vw;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color:#655B6C;;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.6vw;
+    margin-top: 1vw;
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 320px){
+
+}

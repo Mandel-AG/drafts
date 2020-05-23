@@ -1,0 +1,70 @@
+body{
+	margin:0;
+	padding:0;
+	width:auto;
+	height:auto;
+	color: whitesmoke;
+	background: #0A0618;
+	font-family: 'Maven Pro', sans-serif;
+}
+
+
+iframe{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+
+.retourparametre{
+	width: 100%;
+	height: 6vw;
+	display: flex;
+	/*justify-content: center;*/
+	align-items: center;
+	background: rgba(10, 6, 24, 0.5);
+	/*position: absolute;
+	top: 0.1vw;*/
+}
+
+.retourparametre img{
+	width: 7.6vw;
+	height: 7.6vw;
+	margin: 0 3vw;
+}
+
+#retour{
+	width: 3.5vw;
+	height:3.5vw;
+	position: absolute;
+	z-index: 1;
+}
+
+#retour:hover{
+	border-top: 1px solid whitesmoke;
+	border-bottom: 1px solid whitesmoke;
+}
+
+.retourparametre:hover{
+	display: flex;
+}
+
+#retour, #logo:hover{
+	cursor: pointer;
+}
+
+#logo{
+	font-family: "Long Cang", sans-serif;
+	font-size: 6vw;
+	font-weight: 400;
+	color: #FFFFF;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	/*text-shadow: 2px 2px #655B6C;*/
+	text-shadow: 2px 2px 2px #655B6C, 0 0 1em #0A0618, 0 0 0.2em #655B6C;
+}
+
+
+

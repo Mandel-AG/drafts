@@ -1,0 +1,699 @@
+body{
+    width : auto; 
+    height: auto; 
+    margin : 0; 
+    padding: 0; 
+    background-color: #0A0618;
+    color : whitesmoke; 
+    font-family: 'Maven Pro', sans-serif;
+    text-decoration: none;
+    display: flex; 
+    justify-content: space-around;
+}
+
+/* Teaser */
+
+#Teaser {
+    height:100vh;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+#teaser1 {
+    width: 100%;
+    height: 40vh; 
+}
+
+#teaser2 {
+    width: 100%;
+    height: 40vh; 
+}
+
+#teaser3 {
+    width: 100%;
+    height: 40vh; 
+}
+
+#teaser4 {
+    width: 100%;
+    height: 40vh; 
+}
+
+/* Main Page */
+
+#MainPage {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+    height: 100vh;
+}
+
+/* Header */
+
+h1{
+    font-family: 'Long Cang', cursive;
+    font-size: 6vw;
+    margin: 0; 
+}
+  
+#line {
+    width: 60%;
+    border-top: whitesmoke 1px solid;
+    margin-left: 27.2vw;
+    margin-top: -5.55vw;
+}
+
+/* Boutons */
+
+#Boutons {
+    display: flex; 
+    margin-top: 2vw;
+}
+
+#Boutons #LogIn{
+    background: #19193D; 
+    font-size: 2.083vw;
+    padding: 1.38vw; 
+    border: none;
+}
+
+#Boutons #SignUp{
+    background: #19193D;
+    font-size: 2.083vw;
+    padding: 1.38vw; 
+    margin-left: 8.33vw;
+    border: none;
+}
+
+#Boutons a{
+    text-decoration: none; 
+    color: whitesmoke;
+}
+
+#Boutons #LogIn{
+    padding: 0 2vw 0 2vw;
+}
+
+/* Animation bouton LogIn */
+
+#Boutons #LogIn{
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: whitesmoke;
+    text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.8);
+  }
+
+  #Boutons #LogIn:before{
+    content: '';
+    position: absolute;
+    top: -0.3vw;
+    left: -5vw;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+  }
+
+  #Boutons #LogIn:hover:before{
+    animation: animate 1s linear forwards;
+  }
+  @keyframes animate{
+    0%{
+      width: 0;
+      height: 0;
+      border-top-color:whitesmoke;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+
+    50%{
+      width: 150%;
+      height: 0;
+      border-top-color: whitesmoke;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-right-color: whitesmoke;
+    }
+
+    100%{
+        width: 150%;
+        height: 150%;
+        border-top-color: whitesmoke;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-right-color: whitesmoke;
+      }
+  }
+
+  #Boutons #LogIn:after {
+    content: '';
+    position: absolute;
+    top: -3.1vw;
+    left: -0.4vw;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+ }
+ 
+ #Boutons #LogIn:hover:after {
+    animation: animate2 .7s linear forwards;
+ }
+ 
+ @keyframes animate2 {
+    0% {
+       width: 0;
+       height: 0;
+       border-top-color: transparent ;
+       border-right-color: transparent ;
+       border-bottom-color: transparent ;
+       border-left-color:whitesmoke;
+    }
+    50% {
+       width: 0;
+       height: 150%;
+       border-top-color: transparent ;
+       border-right-color: transparent ;
+       border-bottom-color:whitesmoke ;
+       border-left-color: whitesmoke;
+    }
+    100% {
+       width: 150%;
+       height: 150%;
+       border-top-color: transparent ;
+       border-right-color: transparent ;
+       border-bottom-color: whitesmoke;
+       border-left-color:whitesmoke;
+    }
+ }
+
+ /* Animation bouton SignUp */
+
+ #Boutons #SignUp{
+    
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: whitesmoke;
+    text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.8);
+  }
+
+  #Boutons #SignUp:before{
+    content: '';
+    position: absolute;
+    top: -0.2vw;
+    left: -5vw;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+  }
+
+  #Boutons #SignUp:hover:before{
+    animation: animate 1s linear forwards;
+  }
+  @keyframes animate{
+    0%{
+      width: 0;
+      height: 0;
+      border-top-color:whitesmoke;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;
+    }
+
+    50%{
+      width: 150%;
+      height: 0;
+      border-top-color: whitesmoke;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-right-color: whitesmoke;
+    }
+
+    100%{
+        width: 150%;
+        height: 150%;
+        border-top-color: whitesmoke;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-right-color: whitesmoke;
+      }
+  }
+
+  #Boutons #SignUp:after {
+    content: '';
+    position: absolute;
+    top: -2.8vw;
+    left: -0.3vw;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 2px solid transparent;
+ }
+ 
+ #Boutons #SignUp:hover:after {
+    animation: animate2 .7s linear forwards;
+ }
+ 
+ @keyframes animate2 {
+    0% {
+       width: 0;
+       height: 0;
+       border-top-color: transparent ;
+       border-right-color: transparent ;
+       border-bottom-color: transparent ;
+       border-left-color:whitesmoke;
+    }
+    50% {
+       width: 0;
+       height: 150%;
+       border-top-color: transparent ;
+       border-right-color: transparent ;
+       border-bottom-color:whitesmoke ;
+       border-left-color: whitesmoke;
+    }
+    100% {
+       width: 150%;
+       height: 150%;
+       border-top-color: transparent ;
+       border-right-color: transparent ;
+       border-bottom-color: whitesmoke;
+       border-left-color:whitesmoke;
+    }
+ }
+
+/* Formulaires */
+
+/* Section ContainerLogIn */
+
+#ContainerLogIn {
+    width: 100%;
+    display: none; 
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Icône Fermeture */
+
+#Fermeture{
+    display: flex;
+    width: 4%;
+    margin-right: 30vw;
+    cursor: pointer;
+}
+
+/* Formulaire de Log In */
+
+#LogInForm{
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    border: 1px solid whitesmoke;
+}
+
+h3{
+    margin: 1.38vw 0 1.38vw 0;
+    font-weight: 200;
+    font-size: 1.4vw;
+}
+
+form {
+    padding-top: 2.77vw; 
+    font-size: 1vw;
+}
+
+.FormGroup {
+    margin-bottom: 2vw;
+}
+
+input{
+    color: whitesmoke;
+    background-color: #0A0618;
+    margin-bottom: 1.38vw;
+}
+
+.FormGroup label{
+    font-size: 1.1vw;
+}
+
+::placeholder{
+    font-size: 0.75vw;
+}
+
+/* input:focus {
+    border: #19193D; 
+    transition: 1s ease;
+} */
+
+#Submit {
+    margin: 2vw;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+#Submit button{
+    color: whitesmoke;
+    margin-top: 2vw;
+    background: #19193D;
+    border: white 0.2px solid;
+    font-size: 1.33vw;
+    padding: 0.7vw; 
+}
+
+#Submit button:hover {
+    background: #655B6C;
+    transition: 1s ease;
+}
+
+/* Section ContainerAbonnement */
+
+#ContainerAbonnement {
+    display: none; 
+    flex-direction: column;
+}
+/* Icône Fermeture */
+
+#Fermeture2{
+    display: flex;
+    width: 4%;
+    cursor: pointer;
+}
+
+/* Présentation des abonnements */
+ 
+#FenêtreAbonnements {
+    display: flex;
+}
+
+#AbonnementBasic{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+#AbonnementPremium{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+#AbonnementBasic #AbonnementPremium h3 {
+    font-size: 1.4vw;
+    font-weight: 200;
+}
+
+#AbonnementBasic h3{
+    margin: 2vw; 
+    text-align: center;
+}
+
+#AbonnementPremium h3 {
+    margin: 2vw; 
+    text-align: center;
+}
+
+.Checked{
+    margin:0.6vw; 
+}
+
+.Checked li {
+    list-style: none;
+}
+
+#AbonnementBasic{
+    box-shadow:0 2px 5px 2px #655B6C;
+    margin-right: 1.38vw;
+    padding: 1.38vw;
+    font-size: 1.1vw;
+}
+
+#AbonnementPremium {
+    box-shadow:0 2px 5px 2px #655B6C;
+    margin-left: 1.38vw;
+    padding: 1.38vw;
+    font-size: 1.1vw;
+}
+
+.Bouton button{
+    color: whitesmoke;
+    margin-top: 1vw;
+    background: #19193D;
+    border: white 0.2px solid;
+    font-size: 1.33vw;
+    padding: 0.7vw; 
+}
+
+.Bouton button:hover {
+    background: #655B6C;
+    transition: 1s ease;
+}
+
+/* Phrase d'accroche */
+
+#Accroche {
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10vw;
+}
+
+#Accroche a{
+    font-size: 1.66vw;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+#Accroche a:hover {
+    color: #655B6C;
+    text-decoration: underline;
+}
+
+/* Footer */
+
+footer{
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    margin-right: 1vw;
+}
+
+.LiensUtiles{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer #Réseaux {
+    display: flex; 
+    justify-content: space-around;
+}
+
+footer #Réseaux img{
+    width: 3vw;
+}
+
+footer a {
+    color: whitesmoke;
+    font-size: 1.2vw;
+    text-decoration: none;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.6vw;
+    margin-top: 2vw;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color:#655B6C;
+}
+
+@media screen and (max-width: 768px){
+
+body{
+    display: flex; 
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+/* Main Page */
+
+#MainPage {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+    height: 60vh;
+}
+
+/* Header */
+
+h1{
+    font-size: 7vw;
+}
+
+#line {   
+    display: none;
+    /* margin-left: 29.94vw;
+    margin-top: -15vw; */
+}
+    
+/* Teaser */
+    
+#Teaser{
+    height:30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    position: relative;
+}
+
+#teaser1 {
+    width: 24.5%;
+    height: 30vh; 
+}
+
+#teaser2 {
+    width: 24.5%;
+    height: 30vh; 
+}
+
+#teaser3 {
+    width: 24.5%;
+    height: 30vh; 
+}
+
+#teaser4 {
+    width: 24.5%;
+    height: 30vh; 
+}
+
+#Boutons #LogIn{
+    font-size: 3vw;
+}
+
+#Boutons #SignUp{
+    font-size: 3vw;
+}
+
+/* Formulaire de Log In */
+
+#LogInForm{
+    height: 30vh;
+    margin-bottom: 14vw;
+}
+
+.FormGroup label{
+    font-size: 1.1vw;
+}
+
+input{
+    margin-bottom: 1.38vw;
+}
+
+::placeholder{
+    font-size: 0.7vw;
+}
+/* Abonnements */
+
+#ContainerAbonnement {
+    margin-bottom: 15vw;
+}
+#AbonnementBasic label{
+    padding: 0.6vw;
+    font-size: 1.3vw;
+}
+
+#AbonnementPremium label {
+    padding: 0.6vw;
+    font-size: 1.3vw;
+}
+
+/* Phrase d'accroche */
+
+#Accroche {
+    margin-bottom: 15vw;
+    text-decoration: underline;
+}
+
+/* Footer */
+
+footer{
+    position: absolute;
+    top: 95%; 
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    margin-right: 1vw;
+}
+}
+
+@media screen and (max-width: 375px){
+
+/* Header */
+
+h1{
+    font-size: 8vw;
+}
+    
+/* Teaser */
+    
+#Teaser{
+    height:20vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    position: relative;
+}
+
+#teaser1 {
+    width: 23.5%;
+    height: 30vh; 
+}
+
+#teaser2 {
+    width: 23.5%;
+    height: 30vh; 
+}
+
+#teaser3 {
+    width: 23.5%;
+    height: 30vh; 
+}
+
+#teaser4 {
+    width: 23.5%;
+    height: 30vh; 
+}
+
+/* Boutons */
+
+
+#Boutons #LogIn{
+    font-size: 3.5vw;
+}
+
+#Boutons #SignUp{
+    font-size: 3.5vw;
+}
+
+
+}
+
+

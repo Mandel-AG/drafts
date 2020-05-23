@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Dist/cssBootstrap/bootstrap.css">
+    <link rel="stylesheet" href="Public/css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Long+Cang&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700&display=swap" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="Public/js/home.js"></script>
+    <script type="text/javascript" src="Public/js/user.js"></script>
+</head>
+<body>
+
+    <!-- Section Teasers : présentation des quatres derniers teasers mis en ligne sur la plateforme  -->
+        <section id="Teaser">
+            <div>
+                <iframe id="teaser1"  frameborder="0"></iframe>
+                <iframe id="teaser2" frameborder="0"></iframe>
+                <iframe id="teaser3" frameborder="0"></iframe>
+                <iframe id="teaser4" frameborder="0"></iframe>
+            </div>
+        </section>  
+        
+    <!-- Section Main Page : logo, boutons, formulaires et phrase d'accroche -->
+        <section id="MainPage">
+            <h1> MISORA</h1>
+            <div id="line"></div>
+
+            <!-- Boutons -->
+            <section id="Boutons"> 
+                <button id="LogIn"><a href="#">LOG IN</a></button>
+                <button id="SignUp"><a href="#">SIGN UP</a></button>  
+            </section>
+            
+
+            <!-- Formulaire Log In lorsqu'on click sur bouton log in -->
+            <section id="ContainerLogIn">
+                <img id="Fermeture" src="Public/img/Icone Fermeture.png" alt="Icone de fermeture" data-toggle="tooltip" data-placement="bottom" title="Cliquez ici pour fermer la fenêtre">
+
+                <section id="LogInForm">
+                    <h3>LOG IN</h3>
+                        
+                    <form id="typeForm">
+                        <div class="form-group">
+                            <div class="FormGroup">
+                                <label class="col-sm-5 col-form-label-sm"> EMAIL </label>
+                                <input type="email" class="form control form-control-sm mb-2 col-sm-6 " placeholder="Entrez votre email" required autocomplete="off"/>
+                            </div>
+                        </div> 
+                        <div class="form-group">
+                            <div class="FormGroup">
+                                <label class="col-sm-5 col-form-label-sm"> MOT DE PASSE </label>
+                                <input type="password" class="form control form-control-sm mb-2 col-sm-6 " placeholder="Entrez votre mot de passe" required autocomplete="off"/>
+                            </div>
+                        </div>
+                        <div id="Submit">
+                            <p class="forgot"><a href="#">Mot de passe oublié ?</a></p>   
+                            <button id="BoutonLogIn" type="button" class="button button-block">Connexion</button>
+                        </div>
+                    </form>
+                </section>
+            </section>
+
+            <!-- Présentation des abonnements, click sur bouton sign up -->
+        <section id="ContainerAbonnement">
+            <img id="Fermeture2" src="Public/img/Icone Fermeture.png" alt="Icone de fermeture" data-toggle="tooltip" data-placement="bottom" title="Cliquez ici pour fermer la fenêtre">
+
+            <section id="FenêtreAbonnements"> 
+                <div id="AbonnementBasic">
+
+                    <h3>BASIC - 7€/MOIS</h3>
+                    
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked disabled="disabled" />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked disabled="disabled" />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked disabled="disabled" />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked disabled="disabled" />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>    
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" unchecked disabled="disabled"/>
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" unchecked disabled="disabled" />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+
+                    <div class="Bouton">
+                        <button type="button" class="btn-lg rounded-0">Je m'abonne</button>
+                    </div>
+                </div>
+
+                <div id="AbonnementPremium">
+                    
+                     <h3>PREMIUM - 11€/MOIS</h3>
+
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked disabled="disabled"/>
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked disabled="disabled" />
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked disabled="disabled"/>
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>    
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked disabled="disabled"/>
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked disabled="disabled"/>
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+                    <div class="Checked" class="form-check-inline">
+                        <input class="form-check-inline" type="checkbox" name="check-box" checked disabled="disabled"/>
+                        <label for="#">Lorem ipsum dolor sit amet.</label> 
+                    </div>
+
+                    <div class="Bouton">
+                        <button type="button" class="button button-block">Je m'abonne</button>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+             <!-- Phrase d'accroche -->
+             <section id="Accroche">
+                    <a href="catégories.html">Découvrir notre catalogue </a> <br>
+                    <a href="sign_up.html">30 jours offerts avec l'abonnement BASIC</a> 
+            </section> 
+
+             <!-- Footer -->
+            <footer>
+                <div class="LiensUtiles">
+                    <a href="#">Nous connaître</a> 
+                    <a href="#">FAQ</a>
+                    <section id="Réseaux">
+                        <a href="https://twitter.com/"><img src="Public/img/Twitter.png" alt="Icône Twitter"></a>
+                        <a href="https://www.facebook.com/"><img src="Public/img/Facebook.png" alt="Icône Facebook"></a>
+                        <a href="https://www.instagram.com/"><img src="Public/img/Instagram.png" alt="Icône Instagram"></a> 
+                    </section>
+                    <a href="#">Confidentialité</a>
+                    <a href="#">CGU</a> 
+                  </div>
+                <p>© Mandel et Amandine</p>
+            </footer>
+        </section>  
+
+<!-- <script>src="../jsBootstrap/bootstrap.js"</script>  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+</body>
+</html>
