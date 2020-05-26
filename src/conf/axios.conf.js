@@ -8,7 +8,7 @@ const apiMovie = axios.create({
 })
 
 apiMovie.interceptors.request.use( req => {
-  req.headers['Authorization'] = `Bearer  ${process.env.REACT_APP_TOKEN}`;
+  req.headers['Authorization'] = `Bearer ${process.env.REACT_APP_TOKEN}`;
   return req;
 })
 

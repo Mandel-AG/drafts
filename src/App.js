@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Header, MovieDetails, MovieList, Loading, Form, SearchBar } from './components';
+import {Header, MovieDetails, MovieList, Loading, SearchBar } from './components';
 // import * as  axios from 'axios'
 import apiMovie from './conf/axios.conf'
 // import './App.css';
@@ -64,8 +64,6 @@ class App extends Component {
         ) :  (
           <Loading />
         )}
-        
-          <Form />
       </div>
     );
   }

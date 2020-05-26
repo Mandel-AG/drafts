@@ -4,13 +4,16 @@ import './header.css'
 
 export default class Header extends React.Component{
     render(){
+
+        {console.log(process.env.REACT_APP_TOKEN)}
+
         return (
-            <header className='navbar navbar-expand-lg navbar-light '>
-                <a className='navbar-brand title' href='/'>Ag Movie Streaming</a>
+            <header className='navbar navbar-expand-lg navbar-light d-flex justify-content-center '>
+                <a className='navbar-brand title' href='/'>AG Movies Streaming</a>
                 <button className=' navbar-toggler'>
                     <span className='navbar-toggler-icon'></span>
                 </button>
-                <div className='collapse navbar-collapse'>
+                {/* <div className='collapse navbar-collapse'>
                     <ul className='navbar-nav ml-auto'>
                         <li className='nav-item active'>
                         <a className='nav-link' href='/'>Home</a>
@@ -20,7 +23,8 @@ export default class Header extends React.Component{
                         </li>
                     </ul>
 
-                </div>
+                </div> */}
+
             </header>
 
         );

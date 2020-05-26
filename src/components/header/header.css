@@ -1,9 +1,12 @@
 header{
-   background-color: aqua;
+   background-color: #AC9494;
    height: 25vh;
 }
 
 .title{
-   font-size: 3rem;
-   text-align: center;
+   font-size: 4rem;
+   font-family: 'Indie Flower', cursive;
+   font-weight: 800;
+   border: 4px dashed black;
+   padding: 26px;
 }
