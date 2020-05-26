@@ -1,0 +1,9 @@
+header{
+   background-color: aqua;
+   height: 25vh;
+}
+
+.title{
+   font-size: 3rem;
+   text-align: center;
+}

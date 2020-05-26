@@ -1,12 +1,12 @@
 import React from 'react'
-
+import './header.css'
 
 
 export default class Header extends React.Component{
     render(){
         return (
-            <header className='navbar navbar-expand-lg navbar-light bg-light '>
-                <a className='navbar-brand' href='/'>AlloMovie</a>
+            <header className='navbar navbar-expand-lg navbar-light '>
+                <a className='navbar-brand title' href='/'>Ag Movie Streaming</a>
                 <button className=' navbar-toggler'>
                     <span className='navbar-toggler-icon'></span>
                 </button>

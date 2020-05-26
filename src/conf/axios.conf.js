@@ -8,7 +8,7 @@ const apiMovie = axios.create({
 })
 
 apiMovie.interceptors.request.use( req => {
-  req.headers['Authorization'] = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiYWFiZDZmNDFiZDBkOTliOTZkYTYxMjZkYTRhMjEwNSIsInN1YiI6IjVlNDMyY2MwNDE0NjVjMDAxNmQwMDNmMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.X6xAEcJJpdaU1PI1Vxhw9Ksq9NJ-UGXZ0aU2kaYSpng'
+  req.headers['Authorization'] = `Bearer  ${process.env.REACT_APP_TOKEN}`;
   return req;
 })
 
