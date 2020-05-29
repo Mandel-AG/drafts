@@ -1,12 +1,13 @@
 header{
-   background-color: #AC9494;
+   background-color: rgb(194, 194, 219);
    height: 25vh;
 }
 
 .title{
    font-size: 4rem;
-   font-family: 'Indie Flower', cursive;
-   font-weight: 800;
-   border: 4px dashed black;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 500;
+   font-style: italic;
+   /* border: 4px solid black; */
    padding: 26px;
 }
