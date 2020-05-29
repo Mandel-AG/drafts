@@ -27,12 +27,12 @@ class Liste extends Component {
       <div className='d-flex align-items-center flex-column'>
 
         <div className='card w-50 my-4'>
-          <h3>Taches Realisees</h3>
+          <h3>Tâches Réalisées</h3>
           {listtache}
         </div>
 
         <div className='card w-50 my-4'>
-          <h3>Taches a faire</h3>
+          <h3>Tâches à faire</h3>
           {newtache}
         </div>
 

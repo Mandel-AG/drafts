@@ -1,6 +1,7 @@
-import React from 'react'
-import Liste from './liste'
-import Form from './form'
+import React from 'react';
+import Liste from './liste';
+import Form from './form';
+import './home.css';
 
 class Home extends React.Component {
   constructor(props) {
@@ -39,10 +40,10 @@ class Home extends React.Component {
       });
     }
     else if(!nom) {
-      alert('Veuillez entrer quelque chose')
+      alert('Veuillez entrer quelque chose!')
     }
     else{
-      alert('tache deja utilisee')
+      alert('cette tâche est déjà notée!')
     }
   
 
