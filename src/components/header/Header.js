@@ -5,8 +5,6 @@ import './header.css'
 export default class Header extends React.Component{
     render(){
 
-        {console.log(process.env.REACT_APP_TOKEN)}
-
         return (
             <header className='navbar navbar-expand-lg navbar-light d-flex justify-content-center '>
                 <a className='navbar-brand title' href='/'>AG Movies Streaming</a>
