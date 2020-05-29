@@ -117,17 +117,21 @@ class Home extends React.Component {
     
 
     return (
-      <div className='card'>
+      <div className='card d-flex justify-content-center'>
         <span className='card-title'>{titre}</span>
-         <ul className='list-group' >
+        <input className='input-group w-25' type='text' value={search}placeholder='rechercher' onChange={this.updated}></input>
+        <ul className='card d-flex justify-content-center w-25 mb-2 '>
+        {searchResult.map((element,index) => <li key={element.id}>{element.nom}</li>)}
+
+        </ul>
+        <Form handleChange={this.handleChange} addTache={this.addTache} inputText={this.state.Inputvalue}/>
+
+         <ul className='list-group d-flex justify-content-center' >
            <Liste listdone={this.state.done} done={this.done} taches={this.state.taches} deletetache={this.deletetache} />
          </ul> 
-        <Form handleChange={this.handleChange} addTache={this.addTache} inputText={this.state.Inputvalue}/>
         <br/>
 
-        <input className='input-group w-25' type='text' value={search}placeholder='rechercher' onChange={this.updated}></input>
         <ul className='list-group'>
-    {searchResult.map((element,index) => <li key={element.id}>{element.nom}</li>)}
         </ul>
       </div>
     );
