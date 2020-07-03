@@ -1,0 +1,211 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  background-color: #F9F0E6;
+}
+
+.title{
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 3em;
+  font-family: 'Orbitron', sans-serif;
+}
+
+
+
+.canElement::-webkit-scrollbar , .can::-webkit-scrollbar {
+  display: none;
+}
+
+.canElement::-webkit-scrollbar , .can::-webkit-scrollbar {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+
+
+.can{
+  display: flex;
+  flex-wrap: nowrap;
+  height: 70vh;
+  overflow-x: auto;
+  padding-left: 30vw;
+}
+
+
+.canElement{
+  min-height: 100%;
+  min-width: 350px;
+  margin: 0 100px;
+  
+  overflow: hidden;
+  background:  center / contain no-repeat url('https://cdn.shopify.com/s/files/1/0274/3641/7123/t/2/assets/can-shaded-vertical.png?v=14085717242225360706');
+  background-size:  110% 100%;
+  position: relative;
+}
+
+
+.canElementText{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 200vw;
+  height: 100%;
+}
+
+
+
+.canElementText div{
+  margin-left: 70px;
+  margin-right: 150px;
+  width: 100px;
+  font-family: 'Orbitron', sans-serif;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.canElementText div::before{
+  margin: 200px;
+}
+
+
+
+
+
+/* Can 1 */
+
+
+.canElement:nth-child(1){
+  filter: drop-shadow(0px 0px 0px #F3C71E);
+  box-shadow:red ;
+}
+
+.canElement:nth-child(1) .front{
+  color:white;  
+}
+
+
+.canElement:nth-child(1) .back{
+  transform: rotate(90deg);
+  color:white;
+  width: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+/* Can* 2 */
+
+
+.canElement:nth-child(2){
+  filter: drop-shadow(0px 0px 0px #C71EF3);
+}
+
+
+.canElement:nth-child(2) .front{
+  margin-left: 190px;
+  color:white;
+
+}
+
+.canElement:nth-child(2) .back{
+  transform: rotate(90deg);
+  color:white;
+  width: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-right: 30px; 
+}
+
+
+
+/* Can* 3 */
+
+.canElement:nth-child(3){
+  filter: drop-shadow(0px 0px 0px #2362a0);
+}
+
+
+.canElement:nth-child(3) .front{
+  margin-left: -20px;
+  color:white;
+
+}
+
+.canElement:nth-child(3) .back{
+  transform: rotate(90deg);
+  color:white;
+  width: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-right: 290px; 
+}
+
+
+
+/* Can 4 */
+
+.canElement:nth-child(4){
+  filter: drop-shadow(0px 0px 0px #AACC00);
+}
+
+.canElement:nth-child(4) .front{
+  margin-left: 120px;
+  color:white;
+
+}
+
+.canElement:nth-child(4) .back{
+  margin-right: 150px;
+  transform: rotate(90deg);
+  color:white;
+  width: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+/* Can 5 */
+
+.canElement:nth-child(5){
+  filter: drop-shadow(0px 0px 0px #080946);
+}
+
+.canElement:nth-child(5) .front{
+  margin-left: 80px;
+  color:white;
+
+}
+
+.canElement:nth-child(5) .back{
+  margin-right: 140px;
+  transform: rotate(90deg);
+  color:white;
+  width: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.back p{
+  width: 100vw;
+}
+
+
+.empty{
+  min-width: 50vw;
+}
+
+.youCanScroll{
+  padding-top: 20vh;
+  font-size: 3em;
+  position: fixed;
+  left: 2vh;
+  z-index: 0; 
+} 
