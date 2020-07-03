@@ -14,6 +14,7 @@ body{
   font-size: 2em;
   margin-bottom: 3em;
   font-family: 'Orbitron', sans-serif;
+  color: #333333;
 }
 
 
@@ -64,10 +65,17 @@ body{
   margin-left: 70px;
   margin-right: 150px;
   width: 100px;
-  font-family: 'Orbitron', sans-serif;
-  line-height: 30px;
+  font-family: 'Bangers', cursive;
+  font-size: 1.7em;
+  line-height: 50px;
+  font-weight: 500;
   display: flex;
   flex-direction: column;
+}
+
+
+.canElementText .back{
+  font-size: 1.5em;
 }
 
 
@@ -204,8 +212,16 @@ body{
 
 .youCanScroll{
   padding-top: 20vh;
-  font-size: 3em;
+  font-size: 2em;
   position: fixed;
   left: 2vh;
   z-index: 0; 
+  font-family: 'Montserrat Subrayada', sans-serif;
+  color: #45414b;
 } 
+
+
+.disapear{
+  transform: translateX(-600px);
+  transition: all 0.1s ease-in;
+}
