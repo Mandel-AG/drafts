@@ -21,7 +21,7 @@ let divToAdd = initialDiv.cloneNode(true);
 }
 
 /* Listener on window once we start scrolling, we run our function 💨 */
-window.addEventListener('scroll', replaceVerticalScrollByHorizontal);
+window.addEventListener('wheel', replaceVerticalScrollByHorizontal);
 
 
 
