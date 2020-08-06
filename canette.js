@@ -7,10 +7,30 @@ const divTextScroll = document.querySelector('.youCanScroll');
 let initialDiv = divCanElTxt[0].children[0];
 let divToAdd = initialDiv.cloneNode(true);
 
+ /* We define our function 🕹 */
+ function replaceVerticalScrollByHorizontal(event) {
+  //  console.log(event)
+  if (event.deltaY != 0) {
+    // manually scroll horizonally instead
+    window.scroll(window.scrollX + event.deltaY * 5, window.scrollY);
+    
+    // prevent vertical scroll
+    event.preventDefault();
+  }
+  return;
+}
+
+/* Listener on window once we start scrolling, we run our function 💨 */
+window.addEventListener('scroll', replaceVerticalScrollByHorizontal);
+
+
+
 
 
 divCan.addEventListener("scroll", function(e){
-  divCanEl.scrollLeft = divCan.scrollLeft;
+  // divCanEl.scrollLeft = divCan.scrollLeft;
+  divCan.scrollTop = divCan.scrollLeft;
+  // console.log(divCan.scrollTop)
 
   divCanEls.forEach(element => {
       element.scrollLeft = divCanEl.scrollLeft;
