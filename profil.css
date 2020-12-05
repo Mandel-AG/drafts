@@ -68,8 +68,6 @@ body {
 	left: 125px;
 	display: flex;
 	border: 6px solid white;
-
-	/* A revoir */
 	background-color: white;
 	border-radius: 50%;
 	overflow: hidden;
