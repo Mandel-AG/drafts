@@ -6,7 +6,7 @@
 body {
 	display: flex;
 	min-height: 90vh;
-	background-color: rgb(92, 203, 255);
+	background-color: #53a3ad;
 }
 
 .container {
@@ -21,10 +21,26 @@ body {
 	margin: auto;
 }
 
+.bg-top {
+	max-width: 100%;
+	position: absolute;
+	z-index: 1;
+	transform: translate(-20rem, -15rem) rotate(44deg) scale(1.5);
+}
+
+.bg-bottom {
+	max-width: 100%;
+	position: absolute;
+	z-index: -1;
+	transform: translate(19rem, 29rem) scale(1.5);
+}
+
 .profile {
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	z-index: 10;
+	background-color: white;
 }
 
 .profile__top {
@@ -67,6 +83,7 @@ body {
 	align-items: center;
 	font-size: 13px;
 	color: var(--gray-text);
+	padding: 1rem;
 }
 
 .infos__box {
