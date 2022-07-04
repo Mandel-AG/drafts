@@ -11,7 +11,7 @@ export default class AddTutorial extends Component {
       id: null,
       title: "",
       description: "", 
-      published: false,
+      published: true,
       submitted: false
     };
   }
@@ -51,9 +51,16 @@ export default class AddTutorial extends Component {
       title: "",
       description: "",
       published: false,
-      submitted: false
+      submitted: false,
     });
   }
+
+  handleChange = () => {
+    console.log(this.state.published)
+    this.setState({
+      published:!this.state.published
+    });
+  };
   render() {
     return (
         <div className="submit-form">
@@ -88,6 +95,14 @@ export default class AddTutorial extends Component {
                   value={this.state.description}
                   onChange={this.onChangeDescription}
                   name="description"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="status">publish</label>
+                <input type="checkbox"
+                  value={this.state.published}
+                  defaultChecked={this.state.published}
+                  onChange={this.handleChange}
                 />
               </div>
               <button onClick={this.saveTutorial} className="btn btn-success">

@@ -15,3 +15,8 @@
 .tutorialList__editButton{
   color: red;
 }
+
+.navbarLogo{
+  width: 3em;
+  margin: 0 1em;
+}

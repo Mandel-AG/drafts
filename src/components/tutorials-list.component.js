@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TutorialDataService from "../services/tutorial.service";
 import { Link } from "react-router-dom";
+
 export default class TutorialsList extends Component {
   constructor(props) {
     super(props);
@@ -52,7 +53,7 @@ export default class TutorialsList extends Component {
     });
   }
   removeAllTutorials() {
-    if (!alert)return!
+    if (!window.confirm("Êtes-vous sûr de vouloir tout effacer ?"))return;
     TutorialDataService.deleteAll()
       .then(response => {
         console.log(response.data);
@@ -69,6 +70,20 @@ export default class TutorialsList extends Component {
           tutorials: response.data
         });
         console.log(response.data);
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  }
+  deleteTutorial(id){
+    if(!window.confirm('Êtes-vous sur de vouloir supprimer ce tuto ?'))return;
+    TutorialDataService.delete(id)
+    .then(response => {
+        this.setState({
+          tutorials: response.data
+        });
+        console.log(response.data);
+        window.location.reload(true);
       })
       .catch(e => {
         console.log(e);
@@ -93,7 +108,7 @@ export default class TutorialsList extends Component {
                 type="button"
                 onClick={this.searchTitle}
               >
-                Search
+               Description￼ Search
               </button>
             </div>
           </div>
@@ -150,6 +165,7 @@ export default class TutorialsList extends Component {
               >
                 Edit
               </Link>
+              <button onClick={()=> this.deleteTutorial(currentTutorial.id)}>Delete</button>
             </div>
           ) : (
             <div>
