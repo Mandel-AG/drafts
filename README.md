@@ -31,5 +31,5 @@ Enfin, on peut lancer le projet:
 
 *1 :*
 
-ReactDom.create() créait une erreur avec React 18. j'ai trouvé une solution sur plusieurs site dont celui ci :
+ReactDom.create() créait une erreur avec React 18. j'ai trouvé une solution sur plusieurs sites dont celui ci :
 https://javascriptf1.com/how-to/fix-reactdom-render-is-no-longer-supported-in-react-18
