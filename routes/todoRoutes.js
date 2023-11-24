@@ -1,15 +1,15 @@
 const app = require('express').Router()
 const todoModel = require('../models/todoitems')
-const {createTodo, getTodos} = require('./todoController.js')
+const {createTodo, getTodos, deleteTodo} = require('./todoController.js')
 
 
 app.post('/', createTodo )
 
 app.get('/', getTodos )
 
-app.put('/todo/:id', async (req, res) => {
+app.put('/update/:id', async (req, res) => {
     try{
-
+        
         const todo = await todoModel.findByIdAndUpdate(req.params.id, {
             title: req.body.title,
             detail: req.body.detail
@@ -20,6 +20,8 @@ app.put('/todo/:id', async (req, res) => {
         res.send(err)
     }
 })
+
+app.post('/delete/:id',deleteTodo)
 
 
 module.exports = app

@@ -27,3 +27,15 @@ exports.getTodos = async (req, res) => {
         res.send(err)
     }
 }
+
+exports.deleteTodo= async(req,res) => {
+    try{
+        await todoModel.findByIdAndDelete({_id:req.params.id}).exec()
+        res.send('item deleted')
+    }
+    catch(err){
+        console.log(err)
+        res.send(err)
+    }
+
+}
